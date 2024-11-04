@@ -1,0 +1,63 @@
+{
+	"Name": "Dial Pager",
+	"Version": "0.1.0.0",
+	"Author": "bardunbar",
+	"Actions": [
+		{
+			"Name": "Counter",
+			"UUID": "com.bardunbar.dial-pager.increment",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "Displays a count, which increments by one on press.",
+			"PropertyInspectorPath": "ui/increment-counter.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Scroll Pages",
+			"UUID": "com.bardunbar.dial-pager.scroll-pages",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "Change pages with a dial",
+			"Controllers": ["Encoder"],
+			"Encoder": {
+				"layout": "$B1"
+			},
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		}
+	],
+	"Category": "Dial Pager",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "Swap pages using dials",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 2,
+	"Software": {
+		"MinimumVersion": "6.4"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "10.15"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "20",
+		"Debug": "enabled"
+	},
+	"UUID": "com.bardunbar.dial-pager"
+}
